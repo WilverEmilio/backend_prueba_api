@@ -3,7 +3,7 @@ const router = Router();
 
 // facturas
 const facturasController = require('../controllers/cuenta/facturaControler');
-const externoController = require('../controllers/externo/externoController');
+const externoController = require('../controllers/externo/TipoController');
 
 //RUTAS
 
