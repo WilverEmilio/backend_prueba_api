@@ -6,7 +6,8 @@ const facturasController = require('../controllers/cuenta/facturaControler');
 const externoController = require('../controllers/externo/TipoController');
 const clienteController = require('../controllers/externo/clienteController');
 const ventaController = require('../controllers/externo/ventasController');
-const proveedoresCOntroller = require('../controllers/externo/proveedorController')
+const proveedoresCOntroller = require('../controllers/externo/proveedorController'); 
+const compraController = require('../controllers/externo/comprasController');
 
 //RUTAS
 
@@ -34,8 +35,12 @@ module.exports = (app) => {
     router.post('/proveedores/create', proveedoresCOntroller.create);
     router.put('/proveedores/update', proveedoresCOntroller.update);
     router.delete('/proveedores/delete/:id', proveedoresCOntroller.delete);
-    
 
+    router.get('/compras/find', compraController.find);
+    router.post('/compras/create', compraController.create);
+    router.put('/compras/update', compraController.update);
+    router.delete('/compras/delete/:id', compraController.delete);
+    
     app.use('/', router);
 
 };
